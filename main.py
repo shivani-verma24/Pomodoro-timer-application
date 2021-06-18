@@ -9,7 +9,7 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
-timer = None                             # setting it so that it can be used to reset timer
+timer = None                             
 
 # ---------------------------- TIMER RESET ------------------------------- #
 def reset_timer():
@@ -18,7 +18,7 @@ def reset_timer():
     timer_label.config(text = "TIMER")
     check_mark.config(text = "")
     global reps
-    reps = 0                                # reset reps to 0
+    reps = 0                            
 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
@@ -41,14 +41,7 @@ def start_timer():
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
 def count_down(count):
-    """
-    "00:00"
-    for this form instead of counting down from 300,
-    min = 300//60
-    sec = 300%60
-     timer_text.config(text = count)   to change text of label
-    for canvas: itemconfig is used
-    """
+    
     count_min = count//60
     count_sec = count % 60
 
@@ -65,7 +58,7 @@ def count_down(count):
         start_timer()
 
         marks = ""
-        total_worksessions = reps//2                    # increase "✔" after every work session
+        total_worksessions = reps//2                   
         for i in range(total_worksessions):
             marks += "✔"
         check_mark.config(text = marks)
@@ -79,15 +72,6 @@ window = Tk()
 window.title("Pomodoro Timer")
 window.config(padx = 100, pady = 50, bg = YELLOW)
 
-"""
-window.after(delay in millisec, functioncall, pass argument) : 
-executes command after some time delay.
-
-Canvas widget allows to layer things one on top of other.
-In this case, image is place above program window and timer(text) is placed above image.
-Photoimage : reads through a file and gets hold of particular image.
-highlightthickness : to remove canvas edge or border.
-"""
 
 timer_label = Label(text = "Timer", fg = GREEN, bg = YELLOW, font = ("Courier", 50, "bold"))
 timer_label.grid(row= 0, column= 1)
