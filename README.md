@@ -1,0 +1,2 @@
+# Pomodoro-timer-application
+Pomodoro application is based on pomodoro technique which is a time management method. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks in between. Each interval is known as a pomodoro. After 4 pomodoros (which are indicated using check marks), take a long break and reset the timer to start working again.
